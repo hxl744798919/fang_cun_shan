@@ -1,0 +1,194 @@
+/*Write By 10192187 */
+/*v1.2*/
+
+/*气泡默认样式*/
+/*字体:白色/底色:红色/位置:上方/箭头:靠左*/
+.bubbleToolTip {
+	position: absolute;
+	/*margin: 4px;*/
+	width: auto;
+	display: none;
+	z-index: 20000;
+}
+/*上方三角形*/
+.bubbleToolTip:before {
+	content:"";
+	position: relative;
+	margin-left: 10px;
+	height: 0px;
+	width: 0px;
+	display: block;
+	border:5px solid; 
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: rgba(204, 204, 204, 0.9);
+	z-index: 20001;
+}
+/*下方三角形*/
+.bubbleToolTip:after {
+	content:"";
+	position: relative;
+	margin-left: 10px;
+	margin-top: -5px;
+	height: 0px;
+	width: 0px;
+	display: none;
+	border:5px solid; 
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: rgba(204, 204, 204, 0.9);
+	z-index: 20001;
+}
+.bubbleToolTip .bubbleTipBox {
+	overflow: hidden;
+	position: relative;
+	/*height: 26px;*/
+	display: inline-block;
+	background-color: rgba(204, 204, 204, 0.9);
+	box-shadow: 0 2px 4px 0px #888;
+	padding-left: 10px;
+    padding-right: 10px;
+	text-align: left;
+}
+.bubbleToolTip span {
+	line-height: 26px;
+	font-size: 14px;
+	color: black;
+}
+
+
+/*样式定制*/
+/*气泡颜色*/
+/*红色气泡*/
+.toolTipRed:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: rgba(240, 66, 66, 0.9);
+}
+.toolTipRed:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: rgba(240, 66, 66, 0.9);
+}
+.toolTipRed>.bubbleTipBox {
+	background-color: rgba(240, 66, 66, 0.9);
+	color: white;
+}
+.toolTipRed span {
+	color: white;
+}
+/*灰色气泡*/
+.toolTipGray:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: rgba(204, 204, 204, 0.9);
+}
+.toolTipGray:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: rgba(204, 204, 204, 0.9);
+}
+.toolTipGray>.bubbleTipBox {
+	background-color: rgba(204, 204, 204, 0.9);
+}
+.toolTipGray span {
+	color: black;
+}
+/*蓝色气泡*/
+.toolTipBlue:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: rgba(0, 142, 211, 0.9);
+}
+.toolTipBlue:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: rgba(0, 142, 211, 0.9);
+}
+.toolTipBlue>.bubbleTipBox {
+	background-color: rgba(0, 142, 211, 0.9);
+}
+.toolTipBlue span {
+	color: white;
+}
+
+/*气泡位置*/
+/*上方的气泡*/
+.toolTipUp:before {
+	display: none;
+}
+.toolTipUp:after {
+	display: block;
+}
+/*下方的气泡*/
+.toolTipBottom:before {
+	display: block;
+}
+.toolTipBottom:after {
+	display: none;
+}
+
+/*箭头位置*/
+.toolTipTrangleLeft:before {
+	margin-left: 10px;
+	margin-right: auto;
+}
+.toolTipTrangleLeft:after {
+	margin-left: 10px;
+	margin-right: auto;
+}
+.toolTipTrangleCenter:before {
+	margin-left: auto;
+	margin-right: auto;
+}
+.toolTipTrangleCenter:after {
+	margin-left: auto;
+	margin-right: auto;
+}
+.toolTipTrangleRight:before {
+	margin-left: auto;
+	margin-right: 10px;
+}
+.toolTipTrangleRight:after {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.errorBox {
+	box-shadow: 0 0 1em rgba(240, 66, 66, 1) inset;
+    border-color: rgba(240, 66, 66, 0.9);
+    -webkit-animation: contentError 1.5s;
+	-moz-animation: contentError 1.5s;
+	-o-animation: contentError 1.5s;
+	animation: contentError 1.5s;
+}
+
+@keyframes contentError {
+	0%   {box-shadow: 0 0 0.6em rgba(210, 66, 66, 1) inset;}
+	25%  {box-shadow: 0 0 1.5em rgba(250, 66, 66, 1) inset;}
+	50%  {box-shadow: 0 0 0.6em rgba(220, 66, 66, 1) inset;}
+	100% {box-shadow: 0 0 1em rgba(240, 66, 66, 1) inset;}
+}
+
+/*dataTable排序图标*/
+table.dataTable thead .sorting_desc{
+    background-image:none;
+}
+table.dataTable thead .sorting_asc {
+    background-image:none;
+}
+table.dataTable thead .sorting {
+    background-image:none;
+}
+table.dataTable thead .sorting::after {
+    opacity: 0.6;
+}
+table.dataTable thead .sorting_asc::after {
+    opacity: 0.6;
+}
+table.dataTable thead .sorting_desc::after {
+    opacity: 0.6;
+}
+
+/*跟随样式*/
+.toolTipFix {
+
+}
+.toolTipHover {
+
+}
+.toolTipHoverFollow {
+
+}

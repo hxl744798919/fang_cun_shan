@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+.zpopover{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.zpopover-content{
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.zpopover.right .arrow,.zpopover.right .arrow:after{
+    display: none !important;
+}
+table tr td{
+    text-align: center;
+    background: transparent;
+}
+.waning_class24 tr td{
+    color: orange;
+}
+.waning_class48 tr td{
+    color: green;
+}

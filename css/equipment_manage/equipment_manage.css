@@ -1,0 +1,349 @@
+*{
+	font-family: "微软雅黑";
+}
+/*左侧样式*/
+#mapBox{
+	float: left;
+	width: 83.3%;
+	height: 100%;
+	overflow: hidden;
+}
+.overview_left{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	}
+#ocean_map {
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+#Map{
+	height: 100%;
+	width: 100%;
+}
+.buoyBox .buoy{
+	display: inline-block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+.buoyYlw,.buoyDyw{
+	background-image: url(../../image/buoy1.png);
+	background-repeat: no-repeat;
+	background-position: -9px -10px;
+	background-size: 45px 45px;
+}
+.buoyBox .buoyAlert{
+	background-color: #fff ;
+	border: 1px solid #13b5b1;
+	padding: 5px 20px 20px 20px;
+	color: rgb(102,102,102);
+	z-index: 999;
+}
+.buoyBox .buoyAlert p{
+	width: 200px;
+}
+.buoyBox .buoyAlert p:not(.buoyAbout){
+	line-height: 35px;
+}
+.buoyTitle{
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.buoyType{
+	margin-top: 10px;
+}
+.buoyBox .buoyAlert p.buoyLeft{
+	float: left;
+}
+.buoyBox .buoyAlert p .buoyRight{
+	float: right;
+}
+.buoyLatitude{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+.buoyAbout{
+	margin-top: 10px;
+}
+.arrowBuoy {
+	width: 0px;
+	height: 0px;
+	border-top: 12px solid transparent;
+	border-right: 12px solid;
+	border-bottom: 12px solid transparent;
+	margin-left: -12px;
+	margin-top: 112px;
+	border-right-color: #fff;
+	position: absolute;
+	left: 0;
+}
+.gis_buoy{
+	display: none;
+	width: 250px;
+	height: 100px;
+	z-index: 99999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+}
+
+/*右侧样式*/
+.overview_right{
+	position: absolute;
+    z-index: 10;
+    float: right;
+    width: 16%;
+    height: 100%;
+    overflow: hidden;
+    right: 0;
+	}
+	
+.right_title{
+	background: #fff;
+	margin-bottom: 1px;
+	height: 60px;
+	width: 100%;
+	}
+
+.right_title h3{
+	margin: 20px 0 0 8px;
+	font-family: "华文细黑";
+	font-size: 14px;
+	float: left;
+	color: rgb(91,106,115)
+	}
+	
+.tree_div{
+	line-height: 60px;
+	height: 60px;
+	background: #fff;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 1px;
+	font-size: 14px;
+	color: rgb(110,129,140);
+	}
+
+.tree_div font i{
+	font-size: 25px;
+    margin: 18px 8px 8px 8px;
+    float: left;
+    display: block;
+    height: 24px;
+    width: 24px;
+	}	
+
+.icon_right_down{
+	background: url(../../image/bottom.png) !important;
+	}
+
+.icon_bottom_right{
+	background: url(../../image/right.png) !important;
+	}
+.select{
+	float: left;
+    height: 20px;
+    margin: 16px 10px 15px 15px;
+	display: none;
+	}
+.abnormal_list{
+	cursor: pointer;
+    padding-left: 3%;
+	position: relative;
+    z-index: 2;
+	font-size: 14px !important;
+	Height: 60px;
+    line-height: 60px;
+    color: rgb(110,129,140);
+    display: block;
+    margin-bottom: 1px;
+	}
+	
+.ocean_parameters {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+	}
+	
+#ocean_parameters_lucency{
+	width: 100%;
+	display: none;
+	background: #fff;
+    opacity: 0.71;
+	filter: alpha(opacity=71);
+	}
+
+.abnormal_list_lucency {
+    opacity: 0.71;
+    height: 60px;
+    display: block;
+    filter: alpha(opacity=71);
+    cursor: pointer;
+    background: #fff;
+    margin-bottom: 1px;
+    position: relative;
+    z-index: 1;
+    margin-top: -61px;
+	}
+	
+.right_title .abnormal_number{
+	float: right;
+	width: 30%;
+    line-height: 60px;
+	font-size: 12px;
+	color: rgb(197,215,227);
+	}
+	
+.right_title .abnormal_number span{
+	color: rgb(225,131,154);
+	}
+	
+.abnormal_list_bg {
+    background: #000 !important;
+    opacity: 0.35 !important;
+	}
+
+.synthesize_contrast{
+	float: left;
+	width: 100%;
+	height: 60px;
+	background: #8acfdd;
+	margin-top: 0;
+	left: 0;
+	text-align: center;
+	}
+	
+.synthesize_contrast span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 62px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	color: rgb(255,255,255);
+	}
+
+.synthesize_contrast a:link, a:visited, a:hover, a:active{
+	color: rgb(255,255,255) !important;
+	text-decoration: none;
+	}
+
+.equipment{
+	float: left;
+	width: 100%;
+	}
+	
+.equipment .equipment_area{
+	width: 100%;
+    font-size: 14px;
+    color: rgb(110,129,140);
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 46px;
+	}
+
+.equipment .equipment_name{
+	color: rgb(160,176,186);
+    transform: scale(0.875);
+    display: block;
+    font-size: 10px;
+    float: left;
+    height: 15px;
+    line-height: 26px;
+	}
+
+.finally_data{
+	font-size: 12px;
+    color: #318AE3;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin: -19px 10px 0 0;
+	}
+	
+.out_div {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 40px;
+    height: 140px;
+    width: 260px;
+    text-align: center;
+    border-radius: 2px;
+    margin: -102px 0 0 -270px;
+    vertical-align: top;
+    background-color: #fff;
+    z-index: 9999;
+    position: fixed;
+	display:none;
+    }
+	
+.out_show{
+	display:block !important;
+	}
+	
+.arrow {   
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-left: 11px solid;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 57px;
+    border-right-color: #fff;
+    }
+	
+.arrow_title{
+	color: rgb(102,102,102);
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    width: 240px;
+	font-size:14px;
+    border-bottom: 2px solid rgb(102,102,102);
+	}
+.arrow_title img{
+	float: left;
+	margin: 10px -35px 10px 35px;
+	}
+.arrow_text{
+	font-size: 12px;
+    color: rgb(102,102,102);
+    line-height: 20px;
+    padding: 2px 15px;
+    text-align: left;
+	}
+#equipment_manages{
+	display:none;
+	}
+#bouy_tool_tip td{
+    text-align: center;
+	border-bottom: 1px dashed #767676;
+}
+	
+/*GIS地圖 懸浮框樣式*/
+.gis_suspension{
+	width: 220px;
+	}
+.gis_suspension table{
+	width: 220px;
+	}
+.gis_suspension table thead{
+	width:100%;
+	border-bottom:1px solid rgb(102,102,102);
+	}
+.gis_suspension table thead tr{
+	width: 100%;
+	}

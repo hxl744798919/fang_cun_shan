@@ -1,0 +1,335 @@
+/*common define*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑";
+	}
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	font-family: "微软雅黑";
+}
+
+body {
+	background: url(../image/background.png) no-repeat;
+	background-size: cover;
+	}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,p,th,td {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+ol,ul{
+    list-style: none;
+	position: absolute;
+    top: 1px;
+}
+h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 100%;}
+i{	font-style: normal;}
+a{text-decoration: none;color: #000}
+img{border: none;}
+.clear{zoom: 1}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.f1{
+    float: left;
+}
+.f2{
+    float: right;
+}
+.server_class {
+    cursor: pointer;
+}
+
+.user_name{
+	line-height: 50px;
+	font-size: 15px;
+	color: rgb(0,111,136);
+	}
+.user_name a{
+	cursor: pointer;
+	}
+.user_favicon{
+	width: 50px;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    float: right;
+    text-align: center;
+	}
+/* css reset*/
+/* 框架样式区域*/
+header {
+    position: relative;
+	height: 50px;
+}
+.update_time{
+	float: left;
+    margin: 10px 0 0 48px;
+    font-size: 13px;
+    color: white;
+	line-height: 39px;
+	}
+#logo {
+    display: inline-block;
+    padding: 7px 0 10px 8px;
+    position: absolute;
+    top: 0;
+	left: 0;
+}
+#logo:hover:after{
+	content: "首页";
+	color: #fff;
+	background: #3E6178;
+	padding: 3px 5px;
+	font-size: 13px;
+	position: relative;
+	top: -15px;
+}
+.diaphaneity_one{
+	width: 100%;
+	height: 100%;
+	background: rgba(65,196,254,0.4);
+	filter: alpha(opacity=33);
+	}
+.optionBox{
+    position: absolute;
+    right: 0;
+    top: 0;
+	z-index: 9999;
+	}
+/*导航栏样式*/
+.main{
+	width: 100%;
+}
+nav {
+    position: relative;
+    float: left;
+    width: 50px;
+}
+#nav-index{
+	height: 100% !important;
+}
+.diaphaneity{
+	width: 100%;
+	height: 100%;
+	/*max-height:800px;*/
+	position: absolute;
+	background: rgb(0,75,123);
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	}
+
+.nav_stacked{
+	height: 100%;
+	width: 100%;
+	}
+.nav_stacked li{
+	width: 100%;
+    height: 42px;
+    margin: 12px 0;
+    float: left !important;
+	position: relative;
+	}
+
+.nav_stacked li a{
+    float: left;
+    margin-right: 10px;
+	padding:0 0 0 38px !important;
+	}
+.bak{
+	margin: 10px 0px -52px 0px !important;
+	}
+.bak1{
+	background: #4C6C81;
+	}
+.nav_stacked .on_off{
+	background: url(../image/on-off-normal.png) no-repeat;
+    background-position: 0px 0px;
+    display: inline-block;
+	width: 50px;
+	height: 50px;
+    margin: auto;
+	color: #445B60;
+	cursor: pointer;
+	}
+.page_url{
+	height: 35px;
+	background-position: 9px 4px !important;
+	background-color: initial !important;
+}
+.active a.page_url:hover{
+	background-position: 9px 4px !important;
+}
+.active a.page_url:focus{
+	background-position: 9px 4px !important;
+}
+.nav_stacked .sea_env_a{
+	background: url(../image/ocean_framework/sea_env_no.png) no-repeat;
+}
+.nav_stacked .sea_forecast_a{
+	background: url(../image/ocean_framework/sea_forecast_no.png) no-repeat;
+}
+.nav_stacked .sea_space_a{
+	background: url(../image/ocean_framework/sea_space_no.png) no-repeat;
+}
+.nav_stacked .sea_economy_a{
+	background: url(../image/ocean_framework/sea_economy_no.png) no-repeat;
+	}
+.nav_stacked .sea_monitor_a{
+	background: url(../image/ocean_framework/sea_monitor_no.png) no-repeat;
+	}
+.nav_stacked .sea_data_a{
+	background: url(../image/ocean_framework/sea_data_no.png) no-repeat;
+	}
+/*鼠标聚焦*/
+.nav_stacked .sea_env_a:focus{
+	background: url(../image/ocean_framework/sea_env.png) no-repeat;
+}
+.nav_stacked .sea_forecast_a:focus{
+	background: url(../image/ocean_framework/sea_forecast.png) no-repeat;
+}
+.nav_stacked .sea_space_a:focus{
+	background: url(../image/ocean_framework/sea_space.png) no-repeat;
+}
+.nav_stacked .sea_economy_a:focus{
+	background: url(../image/ocean_framework/sea_economy.png) no-repeat;
+}
+.nav_stacked .sea_monitor_a:focus{
+	background: url(../image/ocean_framework/sea_monitor.png) no-repeat;
+}
+.nav_stacked .sea_data_a:focus{
+	background: url(../image/ocean_framework/sea_data.png) no-repeat;
+}
+/*鼠标移入*/
+.sea_env_a:hover{
+	background: url(../image/ocean_framework/sea_env.png) no-repeat !important;
+}
+.sea_forecast_a:hover{
+	background: url(../image/ocean_framework/sea_forecast.png) no-repeat !important;
+}
+.sea_space_a:hover{
+	background: url(../image/ocean_framework/sea_space.png) no-repeat !important;
+}
+.sea_economy_a:hover{
+	background: url(../image/ocean_framework/sea_economy.png) no-repeat !important;
+}
+.sea_monitor_a:hover{
+	background: url(../image/ocean_framework/sea_monitor.png) no-repeat !important;
+}
+.sea_data_a:hover{
+	background: url(../image/ocean_framework/sea_data.png) no-repeat !important;
+}
+
+/*框架样式*/
+#mainContent {
+    position: relative;
+    float: left;
+    height: 99.5%;
+    padding: 10px 0 0 10px;
+}
+
+/* content dwn*/
+#content_dwn_left{
+    top: 40px;
+    height: 94%;
+    width: 80%;
+    padding: 8px 8px 8px 8px;
+}
+#content_dwn_right{
+    top: 40px;
+    height: 94%;
+    width: 20%;
+    padding: 8px 8px 8px 8px;
+}
+
+.out_div {
+    color: #0e4a77;
+    font-size: 16px;
+    line-height: 40px;
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    border-radius: 2px;
+    vertical-align: top;
+    background-color: #0e4a77;
+    z-index: 9999;
+	opacity: 0.70;
+	position: absolute;
+	left: 10px;
+	display: none;
+    }
+.arrow {   
+   width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    margin-left: -7px;
+    margin-top: 10px;
+    }
+	
+.arrow_title{
+	color: rgb(255,255,255);
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    width: 110px;
+    font-size: 14px;
+	}
+.out_show{
+	display: block !important;
+	}
+.span_show{
+	display: none;
+	color: rgb(255,255,255);
+    line-height: 38px;
+	margin-left: 10px;
+	}
+.on_off_li{
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center;
+	line-height: 42px;
+	border-bottom: 1px solid #68706B;
+	}
+	
+.log_out {
+	width: 100px;
+    height: 25px;
+    line-height: 25px;
+    background-image: url(../image/log_bg.png);
+    position: absolute;
+    right: 22px;
+    top: 46px;
+    z-index: 999;
+    text-align: center;
+	display: none;
+	}
+
+
+#time{
+	color: #000;
+	font-size: 12px;
+}
+/*#zte_logo a span{
+	color: #008FD4;
+	font-weight: bolder;
+	font-size: 25px;
+	line-height: 50px;
+}*/
+#zte_logo{
+	display: inline-block;
+	display: none;
+	line-height: 67px;
+}
+.nav_width{
+	width: 135px;
+}

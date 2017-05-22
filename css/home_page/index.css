@@ -1,0 +1,518 @@
+*{
+    font-family: "微软雅黑";
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: url("../../image/background.png") no-repeat;
+    background-size: 100% 100%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.body .main{
+    width: 81.25%;
+    height: 90%;
+    margin: auto;
+    margin-top: 35px;
+}
+header{
+    height: 35px;
+}
+header img,span{
+    vertical-align: middle;
+}
+header .title{
+    color: rgb(255,255,253);
+    font-size: 15px;
+}
+header .user{
+    display: inline-block;
+    color: rgb(255,255,255);
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    vertical-align:middle;
+    position: relative;
+}
+header .user:hover{
+    color: #428bca;
+}
+header .user_photo{
+    height: 50px;
+    width: 50px;
+    vertical-align:bottom;
+}
+header .user .exit{
+    display: none;
+    width: 50px;
+    cursor: pointer;
+    color: #13b5b1;
+    padding: 5px 10px;
+    background: #FAE3C1;
+    position: absolute;
+    font-size: 12px;
+    top: 20px;
+    left: -12px;
+}
+header .user:hover .exit{
+    display: block;
+}
+header .user .exit:hover{
+    color: #428bca;
+}
+.content{
+    margin-top: 40px;
+    height: 88%;
+}
+.container_top{
+    height: 70%;
+}
+.container_top_left{
+    height: 100%;
+    width: 80%;
+}
+.container_top_left .top_four{
+    height: 35%;
+    width: 100%;
+}
+.top_four_a,.top_four_b,.top_four_c,.top_four_d{
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+    display: table;
+}
+.center_box{
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 999;
+    height: 100%;
+}
+.top_four_a{
+    width: 35%;
+    margin-left: 0;
+    background: #13B5B1;
+}
+.top_four_b{
+    width: 35%;
+    background: #00B7EE;
+}
+/*.top_four_c{
+    width: 16.2%;
+    background: #5F52A0;
+    position: relative;
+}*/
+.top_four_d{
+    width: 28%;
+    background: #F19149;
+    position: relative;
+ }
+.temperature_icon_box{
+    margin-left: 10px;
+}
+.temperature_icon{
+    text-align: center;
+}
+.temperature_icon img{
+    margin: auto;
+}
+.icon_title{
+    display: inline-block;
+    font-weight: bold !important;
+    font-size: 15px;
+}
+.temperature{
+    margin-left: 5px;
+    float: left;
+    width: 70%;
+}
+.temperature table{
+    width: 100%;
+}
+.temperature table tr td{
+    text-align: left;
+}
+.temperature p{
+    overflow: hidden;
+}
+.oil_about{
+    width: 60%;
+    height: 70%;
+    display: table;
+}
+.oilinwater{
+    white-space: normal !important;
+}
+.water_temperature{
+    margin-bottom: 1vh;
+}
+.color_red{
+    color: #E91010;
+}
+.color_green{
+    color: #01FA0B;
+}
+.param{
+    display: inline-block;
+    width: 4.5vw;
+}
+.time{
+    display: inline-block;
+    width: 3vw;
+    text-align: right;
+}
+.param_name{
+    width: 3.3vw;
+    text-align: left;
+    padding-left: 5px;
+}
+.num_temp{
+    width: 4.5vw;
+    display: inline-block;
+    text-align: left;
+}
+.wave_wind_rain{
+    line-height: 30px;
+}
+.params{
+    line-height: 2.7vh
+}
+/*.oxygen_box{
+    height: 40%;
+    width: 100%;
+}
+.oxygen{
+    margin: auto;
+}*/
+.oil_box{
+    height: 50%;
+    width: 100%;
+}
+.oil_box .oil{
+    margin: auto;
+    text-align: center;
+}
+.oil_box strong{
+    font-weight: 600;
+}
+.oil_param{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.container_top_left .middle_two{
+    margin-top: 1%;
+    height: 62.85%;
+    width: 100%;
+}
+.middle_two .middle_two_a,.middle_two_b{
+    width: 49.5%;
+    height: 100%;
+    display: table;
+}
+.middle_two_a{
+    color: rgba(255,255,253,0.6);
+    position: relative;
+    background: #8FC31F url(../../image/home_page_bg.jpeg);
+    background-size: 100% 100%;
+}
+.middle_two_b{
+    position: relative;
+    background: #AE5DA1 url(../../image/home_page_bg2.jpeg) no-repeat;
+    background-size: 100% 100%;
+}
+/*.bg_img1{
+    background: #8FC31F url(../../image/home_page_bg.jpeg);
+}
+.bg_img2{
+    background: #AE5DA1 url(../../image/home_page_bg2.jpeg);
+}*/
+.bg_img1,.bg_img2{
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*filter: alpha(opacity=70);
+    opacity: 0.7;*/
+    z-index: -10;
+}
+.place_icon_introduce,.place_param{
+    height: 70%;
+    margin: auto 0;
+    width: 70%;
+}
+.place_icon_introduce2{
+    width: 35%;
+}
+.place_param2{
+    width: 50%;
+}
+/*东冲和西冲的外边距设置*/
+span.western,span.master{
+    margin-right: 14px;
+}
+.place_icon_introduce{
+    padding-top: 3%;
+    z-index: 10;
+}
+.place_icon_introduce .place_icon_font{
+    height: 60%;
+    width: 95%;
+    text-align: center;
+}
+.place_icon_introduce1{
+    width: 29% !important;
+}
+.place_icon_font2{
+    height: 35% !important;
+}
+.place_icon1{
+    /*width: 60%;
+    height: 59%;*/
+}
+.place_icon_font2 img{
+    width: 60%;
+    height: 70%;
+}
+.grade{
+    height: 30%;
+    margin-top: 10px;
+    /*有图片后改回百分之20%*/
+}
+.grade img{
+    width: 50%;
+    height: 50%;
+}
+.grade_top,.grade_middle,.grade_bottom{
+    width: 33.3%;
+    text-align: center;
+}
+.click_grade{
+    cursor: pointer;
+}
+.place_name{
+    font-size: 16px;
+    font-weight: 500;
+}
+/*.place_name span{
+    font-size: 16px;
+}*/
+.place_param{
+    height: 70% !important;
+    border-left: 1px solid rgba(255,255,255,0.6);
+    z-index: 10;
+}
+.place_param2{
+    padding-left: 5%;
+    z-index: 10;
+}
+.place_param table{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    color: rgb(255,255,253);
+}
+.grade_tab{
+    width: 100% !important;
+    height: 100%;
+    line-height: 50px;
+}
+.place_param table tr td:first-child{
+    text-align: left;
+    width: 7vw;
+}
+.place_param table tr td:last-child{
+    width: 8vw;
+    text-align: right;
+}
+.roc_peninsula, .roc{
+    display: none;
+}
+
+.equipment_status_box{
+    height: 90%;
+}
+.status_online,.status_offline{
+    width: 100%;
+}
+.equipment_status{
+    height: 100%;
+    width: 19.23%;
+    background: #EB6877;
+}
+.offline{
+    display: none;
+}
+#pie{
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    margin-top: 5%;
+}
+.status{
+    width: 80%;
+    height: 65%;
+    line-height: 3vh;
+    padding: 0 10%;
+}
+.status h1{
+    font-weight: 600;
+}
+.status p{
+    line-height: 3.5vh;
+}
+.container_bottom{
+    margin-top: 1.5%;
+    height: 26%;
+}
+.bottom_div{
+    display: table;
+}
+.bottom_div figure{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.container_bottom .bottom_div,.edition_box{
+    float: left;
+    width: 16%;
+    height: 100%;
+    margin-left: 0.8%;
+    transition: transform 0.3s;
+}
+.edition_box{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.bottom_div:hover{
+    transform: scale(1.06);
+    box-shadow: 3px 3px 5px #666;
+}
+ .edition_box:hover{
+    transform: scale(1.06);
+    box-shadow: 3px 3px 5px #666;
+}
+.about_us,.edition{
+    height: 100% !important;
+    width: 100% !important;
+}
+.about_us:hover{
+    transform: scale(1);
+    box-shadow: 0 0 0 #666;
+}
+.edition{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #D3B167;
+    background-size: 100% 100%;
+    transform: translateY(-300px); 
+    transition: transform 1s;
+}
+.edition_left{
+    background-color: #333333;
+    height: 80%;
+    width: 70%;
+    float: left;
+    position: relative;
+}
+.img_logo{
+    text-align: left;
+    margin: 5px 0 0 5px;
+}
+.font_logo{
+    font-family: "Segoe Script";
+    text-align: center;
+}
+.edition_time{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.edition_time p{
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 15px;
+}
+.edition_right{
+    float: right;
+    margin: 5px 5px 0 0;
+}
+.edition_right strong{
+    color: #008FD4;
+    font-size: 14px;
+}
+.edition_bot{
+    clear: both;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    top: 10px;
+}
+
+.container_bottom .sea_introduce {
+    margin-left: 0;
+    background: #AE5DA1;
+}
+.container_bottom .ocean_testing {
+    background: #22AC38;
+}
+.container_bottom .equipment{
+    background: #32B16C;
+}
+.container_bottom .data_assess{
+    background: #5F52A0;
+}
+.container_bottom .video{
+    background: #00B7EE;
+}
+.container_bottom .data_admin{
+    background: #8F82BC;
+}
+.container_bottom .about_us{
+    background: #8F82BC;
+}
+.img_bot{
+    height: 65px;
+    width: 65px;
+}
+
+/*字体颜色，点击后激活状态*/
+div.click_grade>span.active{
+    color: #0090ff;
+
+}
+div.click_grade>span{
+    font-size: 15px;
+}
+
+.show{
+    display: block;
+}
+.zte{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+/*IE*/
+img{
+    border: none;
+}

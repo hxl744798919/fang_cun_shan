@@ -1,0 +1,32 @@
+.box1{
+    height: 100%;
+    width: 50%;
+    float: left;
+    margin-left: 1%;
+}
+.box1_top{
+    width: 100%;
+    height: 49%;
+    background: #7f97b1;
+}
+.box1_bottom{
+    width: 100%;
+    height: 49%;
+    background: #a5c0da;
+    margin-top: 2%;
+}
+.box2{
+    height: 100%;
+    width: 29%;
+    float: left;
+    background: #dee0e5;
+}
+.li1{
+    background: #8394cc;
+}
+.li2{
+    background: #24bdb9;
+}
+.li3{
+    background: #5e54a9;
+}

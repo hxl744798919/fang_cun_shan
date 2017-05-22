@@ -1,0 +1,129 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+}
+a:hover{
+	text-decoration: none;
+}
+#willesPlay{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+/*播放器头部*/
+#willesPlay .playHeader{
+	width: 100%;
+	height: 48px;
+	display: flex;
+}
+#willesPlay .playHeader img,.videoName,.videoTime{
+	float: left;
+	color: #3366cc;
+	font-size: 15px;
+	font-weight: 600;
+	margin: auto 0;
+}
+.videoName{
+	margin-left: 10px;
+}
+.videoTime{
+	margin-left: 10px;
+}
+#willesPlay .playContent{
+	position: relative;
+	height: 88%;
+	overflow: hidden;
+	background:#000;
+	cursor: pointer;
+}
+#willesPlay .playContent .playTip{
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	display: flex;
+	line-height: 110px;
+	top: 50%;
+	left: 50%;
+	margin-left: -55px;
+	margin-top: -55px;
+	background-color: rgba(255,255,255,0.7);
+	font-size: 60px;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+}
+#willesPlay .playContent .playTip img{
+	margin: auto;
+	margin-left: 28px;
+}
+#willesPlay .playControll{
+	position: absolute;
+	bottom: 0;
+	z-index: 2147483650;
+	width: 100%;
+	height: 65px;
+	background: #D2DDE3;
+	border-radius: 0px 0px 3px 3px;
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;   
+}
+/*#willesPlay .fullControll{
+	background:rgba(0,0,0,.5);
+}*/
+#willesPlay .playControll .playPause{
+	float: left;
+	width: 65px;
+	height: 65px;
+	cursor: pointer;
+	display: flex;
+}
+#willesPlay .playControll .playPause img{
+	margin: auto;
+	width: 70%;
+	height: 70%;
+}
+#willesPlay .playControll .playIcon{
+	background-position: 0px -32px;
+}
+
+#willesPlay .otherControl{
+	float: right;
+	position: relative;
+}
+
+#willesPlay .otherControl span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 20px;
+	margin: 9px  7px;
+	cursor: pointer;
+}
+#willesPlay .otherControl span:nth-child(1){
+	font-size: 28px;
+	color: #ef6a6c;
+}
+#willesPlay .otherControl span:nth-child(2){
+	color: #919597;
+}
+/*video:: -webkit-media-controls-enclosure {
+    !*禁用播放器控制栏的样式*!
+    display: none !important;
+}*/
+.fullScreen {
+	display: flex;
+	width: 65px;
+	height: 65px;
+	cursor: pointer;
+}
+.fullScreen img{
+	width: 60%;
+	height: 60%;
+	margin: auto;
+}

@@ -1,0 +1,79 @@
+html, body {
+    min-height: 680px;
+    min-width: 300px;
+    height: 100%;
+    width: 100%;
+    scroll: auto;
+    font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+.f1{
+    float: left;
+	padding: 8px 0 0 0;
+}
+.f2{
+    float: right;
+}
+ol,ul{
+    list-style: none;
+    top: 1px;
+}
+#overview {
+    height: 100%;
+}
+*{
+	padding:0;
+	margin:0;
+	}
+
+/*右侧滚动条样式*/
+.ocean_parameters::-webkit-scrollbar-corner {
+	display:none;
+    }
+.ocean_parameters::-webkit-scrollbar {
+        width: 14px;
+    }
+.ocean_parameters::-webkit-scrollbar-track{
+    background: rgba(255,255,255,0.5);
+	opacity: 0.16;
+	filter: alpha(opacity=16);
+}
+    
+.ocean_parameters::-webkit-scrollbar-thumb{	
+    background: rgba(0,0,0,0.53);
+    border-radius: 4px;
+	opacity: 0.53;
+	filter: alpha(opacity=53);
+}
+
+/*页面缩放到1280px改变样式*/
+@media screen and (max-width:1280px){
+	.overview_right{
+		width: 20%;
+		}
+	.overview_left ,.overview_bottom{
+		width: 95%;
+		}
+	.statistics{
+		width: 79%;
+		}
+	.title div{
+		padding-left: 1px;
+		}
+	}
+	
+/*.was_developing{*/
+	/*background:url(../../image/working.PNG);*/
+	/*background-size:cover;*/
+	/*}*/
+	
+.abnormal_list_sz{
+	color: #fff !important;
+	}	
+.abnormal_list_sz div span{
+	color: #fff !important;
+	}
+.abnormal_list_sz div .data_state_font, .data_unit{
+	color:#BCC6FC !important;
+	}

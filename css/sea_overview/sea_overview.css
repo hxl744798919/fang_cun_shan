@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    font-family: "微软雅黑";
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#overview{
+    width: 100%;
+    height: 100%;
+}
+#mapBox{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#ocean_map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.rightTop ,.minRightTop{
+    position: absolute;
+    top: 23px;
+    right: 78px;
+    background: #fff;
+    height: 25px;
+    line-height: 25px;
+}
+
+.rightTop .toggle ,.minRightTop span{
+    float: left;
+    height: 25px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.rightTop .toggle{
+    background:#eee url(../../image/scale_right.png) no-repeat -6px 6px;
+}
+.minRightTop span{
+    background:#eee url(../../image/scale_left.png) no-repeat -8px 7px;
+}
+
+.minTxt{
+    display: inline-block;
+    font-size: 12px;
+    height: 50px;
+    padding: 0 3px;
+    text-align: center;
+    cursor: pointer;
+}
+.rightTop .checkBox{
+    float: left;
+    display: inline-block;
+    font-size: 12px;
+    padding-right: 15px;
+}
+.rightTop .checkBox li{
+    float: left;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.rightTop .checkBox li span.icon{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: -4px;
+}
+
+.checkColor{
+    color: #32b16c;
+}
+
+.checkBox li img{
+    width: 15px;
+    height: 15px;
+}
+
+
+/*右下角小地图*/
+#map_shrink{
+    width:434px;
+    height: 253px;
+    padding: 13px ;
+    background: #fff;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+}
+/*小地图正方形提示框*/
+[class$= area]{
+    width:434px;
+    height: 253px;
+    padding: 13px ;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*增养殖区*/
+/*统一设置鹰眼的边框颜色*/
+div.hover{
+    border:2px solid #314C84;
+}
+/*鼠标移上去效果*/
+div.hover:hover{
+    cursor:pointer;
+    border-color: yellow;
+}
+/*小地图激活项*/
+.all_area>div{
+    display: none;
+}
+div.area_active{
+    display: block;
+}
+.zhenyanzhi_nanao{
+    width: 14px;
+    height: 24px;
+    position: absolute;
+    top:127px;
+    right: 98px;
+}
+.zhenyanzhi_dongsan{
+    width: 26px;
+    height: 25px;
+    position: absolute;
+    top:98px;
+    right: 66px;
+}
+/*滨海旅游度假区*/
+/*保安*/
+.binhai_baoan{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top:45px;
+    left: 64px;
+}
+/*前海*/
+.binhai_qianhai{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top:118px;
+    left: 106px;
+}
+/*后海*/
+.binhai_houhai{
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top:136px;
+    left: 130px;
+}
+/*大小梅沙*/
+.binhai_meishao{
+    width: 50px;
+    height: 21px;
+    position: absolute;
+    top:97px;
+    right: 145px;
+}
+/*西涌*/
+.binhai_xiyong{
+    width: 33px;
+    height: 17px;
+    position: absolute;
+    top:88px;
+    right: 102px;
+}
+/*南澳*/
+.binhai_nanao{
+    width: 79px;
+    height: 55px;
+    position: absolute;
+    top:120px;
+    right: 40px;
+}
+/*坝光*/
+.binhai_baiguan{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top:61px;
+    right: 42px;
+}
+
+
+/*海水浴场*/
+/*小梅沙*/
+div.haishui_xiaomeisha{
+    width: 8px;
+    height: 8px;
+    background: #314C84;
+    border:2px solid transparent;!important;
+    position: absolute;
+    top:100px;
+    right: 158px;
+}
+/*大梅沙*/
+div.haishui_dameisha{
+    width: 8px;
+    height: 8px;
+    background: #E7178C;
+    border:2px solid transparent;!important;
+    position: absolute;
+    top:107px;
+    right: 169px;
+}
+/*重点工程用海区*/
+/*西部用海区*/
+.zhongdian_xibu{
+    width: 65px;
+    height: 134px;
+    position: absolute;
+    top:32px;
+    left: 63px;
+}
+/*东部用海区*/
+.zhongdian_dongbu{
+    width: 118px;
+    height: 74px;
+    position: absolute;
+    top:56px;
+    right: 61px;
+}
+/*航道用海区*/
+/*航道西部用海区*/
+.handao_xibu{
+    width: 140px;
+    height: 147px;
+    position: absolute;
+    top:28px;
+    left: 61px;
+}
+/*航道东部用海区*/
+.handao_dongbu ,.yuyeziyuan_dongbu{
+    width: 116px;
+    height: 116px;
+    position: absolute;
+    top:60px;
+    right: 24px;
+}
+/*海洋自然保护区*/
+/*海洋保护区西部*/
+.baohuqu_xibu{
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top:178px;
+    left: 83px;
+}
+/*海洋保护区中部*/
+.baohuqu_zhongbubu{
+    width: 28px;
+    height: 14px;
+    position: absolute;
+    top:130px;
+    left: 144px;
+}
+/*海洋保护区东部*/
+.baohuqu_dongbu{
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top:95px;
+    right: 40px;
+}
+/***渔业资源利用和养护区***/
+/*渔业资源西部*/
+.yuyeziyuan_xibu{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top:134px;
+    left: 105px;
+}
+/*点击小地图弹出放大地图*/
+#map_magnify{
+    width: 100%;
+    height: 100%;
+    background: aqua;
+    position: absolute;
+    left: 100%;
+    top:100%;
+}
+#map_magnify img{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#map_magnify img:hover{
+    cursor: pointer;
+}
+#ocean_map_2{
+    width: 100%;
+    height: 100%;
+}

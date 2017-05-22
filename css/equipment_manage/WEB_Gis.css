@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+.zpopover{
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+	}
+.zpopover-content{
+	background:#F6F6F6 !important;
+}

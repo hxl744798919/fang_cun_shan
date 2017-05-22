@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+.zpopover{
+    background: rgba(0,0,0,0) !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: absolute;
+    left: 0px !important;
+    top: -50px !important;
+}
+.zpopover-content{
+    background: rgba(0,0,0,0) !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.zpopover.right .arrow{
+    display: none !important;
+}
+/*气泡样式*/
+.buoy_box{
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    box-shadow: 10px 10px 15px #666;
+    border: none !important;
+    line-height: 13px;
+    overflow: hidden;
+}
+.wave_buoy_box{
+    height: 74px;
+    width: 140px;
+}
+.env_buoy_box{
+    width: 145px;
+    height: 80px;
+}
+.pw_buoy_box{
+    width: 131px;
+    height: 100px;
+}
+.env_buoy_box .img_box{
+    position: absolute;
+    top: -4px;
+    left: -15px;
+}
+.wave_buoy_box .img_box{
+    position: absolute;
+    top: -9px;
+    left: -11px;
+}
+.pw_buoy_box .img_box{
+    position: absolute;
+    top: -6px;
+    left: -13px;
+}
+.img_line_box{
+    position: absolute;
+    bottom: -20px;
+    right: -17px;
+}
+.buoy{
+    font-size: 12px;
+    color: #00416c;
+    user-select: none;
+    line-height: 12px
+}
+.wave_buoy_box .buoy{
+    width: 130px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.env_buoy_box .buoy{
+    width: 142px;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+}
+.wave_buoy_box .buoy{
+    position: absolute;
+    top: 14px;
+    left: 7px;
+}
+.pw_buoy_box .buoy{
+    position: absolute;
+    top: 11px;
+    left: 3px;
+}
+.buoy tr td:last-child{
+    text-align: right;
+    min-width: 20px;
+}
+.pw_buoy_box .buoy tr td:last-child{
+    text-align: right;
+    min-width: 45px;
+}
+.buoy tr td{
+    text-align: left;
+}
+.align_right{
+    text-align: right !important;
+}
+.buoy_num{
+    z-index: 200 !important;
+}

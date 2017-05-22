@@ -1,0 +1,56 @@
+.box1{
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+.box1_top{
+    height: 49.5%;
+    width: 100%;
+}
+.box1_bottom{
+    height: 49.5%;
+    width: 100%;
+    margin-top: 1%;
+}
+.box_fl{
+    width: 49.5%;
+    height: 100%;
+    float: left;
+}
+.box_fr{
+    width: 49.5%;
+    height: 100%;
+    float: left;
+}
+.box1_top .box_fl{
+     background: #d3f5f5;
+ }
+.box1_bottom .box_fl{
+    background: #ccc;
+}
+.box1_top .box_fr{
+    background: #9db4c3;
+    margin-left: 1%;
+}
+.box1_bottom .box_fr{
+    background: #a8caed;
+    margin-left: 1%;
+}
+.nav li{
+    height: 24.5%;
+}
+.nav li:not(.li1){
+    margin-top: 2% !important;
+}
+.li1{
+    background: #ffd41e;
+}
+.li2{
+    background: #5ccaf5;
+}
+.li3{
+    background: #fc7b51;
+}
+.li4{
+    background: #bf67d5;
+}

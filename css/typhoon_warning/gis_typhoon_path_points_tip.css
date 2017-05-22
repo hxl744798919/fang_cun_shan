@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    font-family: "微软雅黑";
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#ty_way_tip{
+    width: 210px;
+    padding: 10px;
+    background: #fff;
+    font-size: 14px;
+    font-family: 新宋体;
+    border-radius: 5px;
+}
+#ty_way_tip ul>li{
+    height:23px;
+    line-height: 23px;
+}
+#ty_way_tip>p{
+    color: #2F2FFF;
+    text-align: center;
+}
+#ty_way_tip ul>li>lable{
+    margin-left: 28px;
+}
+.zpopover{
+    border: none !important;
+    box-shadow: none !important;    
+}
+.zpopover-content{
+    padding: 0 !important;
+    border: none !important;
+}
+.zpopover.right .arrow,.zpopover.right .arrow:after{
+    border-right-color: #7194dc !important;
+    display: none !important;
+}
+
+/*小三角*/
+#triangle{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 15px solid #fff;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: -8px;
+    top: 44px;
+}
+
+/*右上角的X*/
+span.close_off{
+    height: 16px ;
+    width: 16px ;
+    background: url("../../image/close-blue.png") no-repeat;
+    position: absolute;
+    right:5px;
+    top:5px;
+    z-index: 99;
+    cursor: pointer
+}

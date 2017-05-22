@@ -1,0 +1,86 @@
+/*new*/
+/*页面统一颜色*/
+.blue {color: #325bdb;}
+
+.green {color: #11C897;}
+
+.orange {color: #FA7256;}
+
+.gray {color: #cccccc;}
+
+.background-blue {background-color: #325bdb;}
+
+.background-green {background-color: #11C897;}
+
+.background-orange {background-color: #FA7256;}
+
+.background-gray {background-color: #cccccc;}
+
+
+/*区域上下左右间隔*/
+.area-gap-top{
+  margin-top : 5px;
+}
+.area-gap-left{
+  margin-left : 5px;
+}
+.area-gap-bottom{
+  margin-bottom : 5px;
+}
+.area-gap-right{
+  margin-right : 5px;
+}
+
+/*导航条高度宽度*/
+.navbar-iframe {
+  height:55px;
+  width:100%;
+}
+
+/*区域标题div设置*/
+.panel-title-div{
+  padding: 5px;
+  cursor: default;
+}
+
+/*可点击、不可点击图标*/
+.icon_clickable{
+  font-size:16px;
+  color:#325bdb;
+  cursor: pointer;
+  vertical-align:text-top;
+}
+
+.icon_non_clickable{
+  color : #cccccc;
+  cursor : default;
+  font-size:16px;
+  vertical-align:text-top;
+}
+
+.fa-download{
+  padding-top: 1px;
+}
+
+/*日历控件样式*/
+.calendar-style{
+  color: #FFF;
+  background-color: #325bdb;
+  border-color: #357EBD;
+  cursor: pointer;
+}
+
+/*页面统一字体*/
+body {
+    font-family:Helvetica, Arial, "Microsoft YaHei", sans-serif;
+}
+
+/*覆盖bootstrap默认样式*/
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+    background-color:#325bdb;
+}
+
+.btn-primary {
+    background-color:#325bdb;
+}

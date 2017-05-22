@@ -1,0 +1,50 @@
+/*固定宽度设置*/
+.container {
+    width:1280px !important;
+    min-width:1280px !important;
+    max-width:1280px !important;
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+/*body的背景色*/
+.bodyBackground{
+    background-color: #F1F3FA;
+}
+
+ /*区域背景色*/
+.panelBackground{
+    background-color: #FFF;
+}
+
+/*查询栏样式*/
+.queryFieldStyle {
+    padding:6px;
+    height:40px;
+}
+
+/*可点击元素的背景颜色，包括文字，按钮，查询*/
+.clickColor{
+    background-color:#325BD3;
+}
+
+/*区域标题字体*/
+.panelTitleFont {
+    font-size:16px;
+    font-family:Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    font-color:#333;
+}
+
+/*正文字体*/
+.bodyFont{
+    font-size:14px;
+    font-family:Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    font-color:#333;
+}
+
+/*查询条件label字体*/
+.queryLabelFont{
+    font-size:14px;
+    font-family:Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    font-color:#333;
+}

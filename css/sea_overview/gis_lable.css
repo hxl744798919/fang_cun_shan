@@ -1,0 +1,156 @@
+ul,li,p,div {
+     padding: 0;
+     margin: 0;
+     font-family: "微软雅黑";
+ }
+ul li{
+    list-style: none;
+}
+/*html,body{*/
+    /*font-family: "微软雅黑";*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*overflow: hidden;*/
+/*}*/
+
+
+#overview_label{
+    width: 300px;
+    /*height: 381px;*/
+    background: #fff;
+    position: relative;
+
+}
+/*头部*/
+.Over_head{
+    width: 300px;
+    /*height: 58px ;*/
+    line-height: 58px;
+    background:#5A7AA1 ;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+/*彩条*/
+.colour{
+    height: 5px;
+    background: url("../../image/colour.png") no-repeat;
+}
+/* 标签切换功能*/
+/*.label_switchover{*/
+    /*height: 58px;*/
+    /*margin-bottom: 6px;*/
+    /*background: #fff;*/
+/*}*/
+
+.label_switchover li img{
+    vertical-align:middle;
+}
+.label_switchover li{
+    float: left;
+    width: 99px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    background: #5A7AA1;
+}
+.label_switchover li:nth-child(2){
+    margin: 0 1.5px;
+}
+.label_switchover li:hover{
+    cursor:pointer
+}
+
+.label_switchover li.li_activation{
+    background: #fff;
+}
+/*参数*/
+div[class$="parameter"]{
+    /*height:324px ;*/
+    background: url("../../image/parameter_back.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*其他元素隐藏起来，激活项显示*/
+.parameter div{
+    display: none;
+}
+div.parameter_active{
+    display: block;
+}
+/*小三角*/
+.triangle{
+    position: absolute;
+    left: -60px;
+    top:47%;
+    width: 0;
+    height: 0;
+    border:30px solid  transparent;
+    border-right-color: #E5E2DB;
+}
+/*位置信息*/
+.geog_parameter p , .scene_parameter p , .wate_parameter p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.geog_parameter ul , .scene_parameter ul{
+    font-size: 13px;
+    font-family: "Arial";
+    margin: 16px 0 0 16px;
+}
+.geog_parameter ul li , .scene_parameter ul li{
+    height: 26px;
+    line-height: 26px;
+}
+.geog_parameter ul li span {
+    margin-left: 80px;
+}
+.scene_parameter ul li span{
+    margin-left: 50px;
+}
+.scene_parameter ul li lable{
+    margin: 0 13px;
+}
+/*水质数据参数*/
+.wate_parameter ul{
+
+    font-size: 12px;
+    font-family: "Arial";
+}
+.wate_parameter ul li{
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 3px;
+}
+.wate_parameter ul li span{
+    float:right;
+}
+
+/*修改gis默认的样式*/
+div.zpopover-content{
+    padding: 0;
+}
+.zpopover div.arrow{
+    display: none;!important;
+}
+div.zpopover{
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+/*右上角的X*/
+span.close_off{
+    height: 16px ;
+    width: 16px ;
+    background: url("../../image/close_off.png") no-repeat;
+    position: absolute;
+    right:5px;
+    top:5px;
+    z-index: 99;
+    cursor: pointer
+}

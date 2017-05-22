@@ -1,0 +1,337 @@
+ *{
+    padding: 0;
+    margin: 0;
+     font-family: "微软雅黑";
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    font-family: "微软雅黑";
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.assessMap{
+    height: 100%;
+    width: 100%;
+}
+.rightTop,.minRightTop{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.rightTop .toggle,.minRightTop span{
+    float: left;
+    height: 50px;
+    width: 15px;
+    cursor: pointer;
+}
+.rightTop .toggle{
+    background:#eee url(../../image/scale_right.png) no-repeat -8px 17px;
+}
+.minRightTop span{
+    background:#eee url(../../image/scale_left.png) no-repeat -10px 17px;
+}
+.minTxt{
+    display: inline-block;
+    font-size: 13px;
+    height: 50px;
+    width: 60px;
+    text-align: center;
+}
+.rightTop .checkBox{
+    float: left;
+    display: inline-block;
+    font-size: 13px;
+    padding-right: 15px;
+}
+.rightTop .checkBox li{
+    float: left;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.rightTop .checkBox li span.icon{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: -4px;
+}
+.checkColor{
+    color: #32b16c;
+}
+.assessMap .bottomTrend{
+    background: #fff;
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px;
+    display: none;
+}
+.bottomTrendNav{
+    overflow: hidden;
+}
+.bottomTrendNav .left{
+    float: left;
+}
+.bottomTrendNav .right{
+    float: right;
+}
+.bottomTrendNav .place{
+    float: left;
+    border-right: 2px solid #666;
+    padding: 2px 0;
+    padding-right: 10px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+}
+.bottomTrendNav .scale{
+    float: left;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.bottomTrendNav .open{
+    float: left;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.bottomTrendNav .open img,.scale img{
+    position: relative;
+    top: -13px;
+    left: -2px;
+}
+.bottomTrend .trend{
+    height: 145px;
+}
+.miniTrend{
+    display: inline-block;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.miniPlace{
+    color: rgb(91,106,95);
+    font-size: 12px;
+    border-right: 2px solid #5a5a5a;
+    padding: 0 10px;
+}
+.bigTrend{
+    vertical-align: middle;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.parameter{
+	padding: 0 !important;
+	}
+#area_parameter{
+	float: left;
+    height: 25px;
+    line-height: 25px;
+	}
+#area_parameter div{
+	float: left;
+	margin-right: 7px;
+    cursor: pointer;
+	}
+#area_parameter div span {
+	padding: 3px 2px 0 0;
+    height: 20px;
+    display: block;
+    float: left;
+	}
+/*鼠标放上去提示框css*/
+.tooltip{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 1;
+}
+ .tooltip_head{
+    background: #e6f2fc;
+    padding: 20px;
+    min-width:260px;
+    height: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #6fb7ef;
+    color: #000;
+    font-weight: bold;
+    font-family: "黑体";
+}
+.tooltip .tooltip_head>p{
+    float: left;
+}
+.tooltip .tooltip_head span{
+    color:rgb(50,177,108);
+}
+.tooltip .tooltip_head>span.close{
+    float: right;
+    margin-top: 7px;
+    padding: 7px;
+    background: url("../../image/close-grey.png") no-repeat;
+}
+/*鼠标移到X上时候变成小手*/
+div.tooltip_head>span.close:hover{
+    cursor:pointer;
+}
+/*图片显示数据格式*/
+/*清除浮动*/
+.outer:after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.tooltop_print:not(p){
+    font-family: Times New Roman !important;
+}  
+.fa-long-arrow-down{
+    color: #2adb8e;
+}
+.fa-long-arrow-up{
+    color: #ea68a2;
+}
+div.tooltop_details{
+    background: #e6f2fc;
+    opacity: 0.95;
+    min-width: 300px;
+}
+div.details{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+div.tooltop_print:nth-child(2){
+    margin: 0 30px ;
+}
+div.tooltop_print{
+    float: left;
+}
+div.tooltop_print>img{
+    float: left;
+}
+div.tooltop_print div{
+    float: left;
+    font-size: 17px;
+    margin-top: -5px;
+}
+div.tooltop_print div>p{
+    font-size: 10px;
+    color: #333;
+}
+div.tooltop_print>span{
+   float: left;
+   margin-top: 10px;
+    margin-left: 5px;
+}
+ div.tooltop_print>span.DO{
+    background: url("../../image/DO.png") no-repeat;
+    margin: 0;
+}
+/*数字显示格式*/
+div.tooltop_num{
+    min-width: 240px;
+    margin: 0 10px;
+    border: 1px solid #6fb7ef;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+div.tooltop_num p{
+    float: left;
+    padding: 0 6px ;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+div.tooltop_num p>span{
+    margin-left: 10px;
+}
+div.tooltop_num P:last-child{
+    float: right;
+}
+/*文字简介*/
+p.text_description{
+    padding: 20px;
+    font-size: 14px;
+    color: rgb(90,106,115);
+    text-align: justify;
+    white-space: normal;
+    max-width: 350px;
+    text-align:left;
+    color: rgb(36, 65, 101);
+    font-family: "宋体";
+}
+/*时间控件*/
+.bottomTrendNav .time{
+    float: left;
+    height: 20px;
+    padding: 1px 10px;
+    font-size: 13px;
+}
+#div_date{
+    display: inline-block;
+    margin-left: 10px;
+}
+.input_box{
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    float: left;
+}
+#date input{
+    width: 80px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: rgb(42,54,61);
+    cursor: pointer;
+}
+#date input:hover{
+    color: #00a2d4;
+}
+#date #confirm_btn{
+    float: left;
+    background: #fff;
+    outline: none;
+    height: 22px;
+    padding: 1px 3px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    border-left: none;
+    cursor: pointer;
+}
+.date_prompt{
+	display: none;
+	transform: scale(0.9);
+    float: left;
+    color: red;
+    margin: -41px 0 -3px 82px;
+	}
+#ui-datepicker-div{
+    height: 238px;
+}
+.ui-icon-circle-triangle-w{
+    background: url(../../image/date_left.png) !important;
+}
+.ui-icon-circle-triangle-e{
+    background: url(../../image/date_right.png) !important;
+}
+#ui-datepicker-div{
+    height: 238px;
+}
+.color_b{
+    color: #000;
+}
