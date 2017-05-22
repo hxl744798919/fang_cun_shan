@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>多元数据评估</title>
+<link rel="stylesheet" href="css/common/jquery-ui.min.css">
+<link href="css/data_assess/data_assess.css" rel="stylesheet" />
+<link href="css/common/dateRange.css" rel="stylesheet" />
+<link href="thirdparty/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="css/common/dateRange.css" rel="stylesheet" />
+<script data-main="js/data_assess_config" src="thirdparty/require.min.js"></script>
+</head>
+<body id="body">
+<div class="assessMap" >
+        <div id="assess_map" style="width: 100%;height: 100%;"></div>
+        <div id="tooltips" onselectstart="return false">
+
+        </div>
+
+    <div class="rightTop">
+        <div class="toggle"></div>
+        <ul class="checkBox" onselectstart="return false">
+            <li><span class="icon"><img src="image/radio-deselect.png" ></span>鱼礁区</li>
+            <!--<li><span class="icon"><img src="image/radio-deselect.png" ></span>港湾区</li>-->
+            <li><span class="icon"><img src="image/radio-deselect.png" ></span>排污区</li>
+            <li><span class="icon"><img src="image/radio-deselect.png" ></span>增养殖区</li>
+            <li class="li"><span class="icon"><img src="image/radio-deselect.png" ></span>海水浴场</li>
+            <li><span class="icon"><img src="image/radio-deselect.png" ></span>旅游区</li>
+        </ul>
+    </div>
+    <div class="minRightTop" style="display: none"><span></span><div class="minTxt">鱼礁</div></div>
+    <div class="bottomTrend">
+        <div class="bottomTrendNav">
+            <div class="left">
+                <span class="place">大梅沙浴场</span>
+                <div class="time" id="date">
+                    <div class="input_box">
+                    	<input type="text" id="dateStart" value="2016-09-22" readonly>-
+                        <input type="text" id="dateEnd"  value="2016-09-22" readonly>
+                    </div>
+                    <button id="confirm_btn">确定</button>
+                </div>
+                <div id="area_parameter"></div>
+            </div>
+            <div class="right">
+                <span class="scale"><img src="image/small.png"></span>
+                <span class="open"><img src="image/click_right.png"></span>
+            </div>
+        </div>
+        <span class="date_prompt">提示：对不起！日期选择不能超过三天</span>
+        <div class="trend" id="trend_show"></div>
+    </div>
+    <div class="miniTrend">
+        <span class="miniPlace">小梅沙浴场</span><img src="image/big.png" class="bigTrend">
+    </div>
+</div>
+</body>
+</html>

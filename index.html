@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海洋监测平台</title>
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/home_page/index.css">
+    <script data-main="js/home_page_config" src="thirdparty/require.min.js"></script> 
+</head>
+<body onselectstart="return false">
+<div class="body">
+    <div class="zte">2017 © ZTE - 中兴通讯股份有限公司</div>
+    <div class="main">
+        <header>
+            <div class="left">
+                <img src="image/jcybzx_logo.png" class="logo" style="float: left;">
+                <div style="float: left; margin-left: 10px">
+                    <div class="title" style="font-weight: bold;">深圳市海洋监测预报中心</div>
+                    <div style="float: left; margin-top: 5px" id="now_time"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="user">admin <span class="exit">退出登录</span></div><img src="image/userName.gif" class="user_photo">
+            </div>
+        </header>
+        <div class="content">
+            <div class="container_top">
+                <div class="container_top_left left">
+                    <div class="top_four">
+                        <div class="top_four_a">
+                            <div class="center_box">
+                            <div class="temperature_icon_box left">
+                                <figure class="temperature_icon">
+                                    <img src="image/temperature_icon.png">
+                                    <figcaption>海洋热<br>状况</figcaption>
+                                </figure>
+                            </div>
+                            <div class="temperature left">
+                                <table class="water_temperature">
+                                    <tr><td><strong>最高水温</strong></td><td><span class="max_temp_water_val">--</span> °C</td>
+                                        <td class="max_temp_water_name">核电站</td><td class="max_temp_water_time">--</td>
+                                    </tr>
+                                    <tr><td><strong>最低水温</strong></td><td><span class="min_temp_water_val">--</span> °C</td>
+                                        <td class="min_temp_water_name">核电站</td><td class="min_temp_water_time">--</td>
+                                    </tr>
+                                </table>
+                                <table class="air_temperature">
+                                    <tr><td><strong>最高气温</strong></td><td><span class="max_temp_air_val">--</span> °C</td>
+                                        <td class="max_temp_air_name">核电站</td><td class="max_temp_air_time">--</td>
+                                    </tr>
+                                    <tr><td><strong>最低水温</strong></td><td><span class="min_temp_water_val">--</span> °C</td>
+                                        <td class="min_temp_water_name">核电站</td><td class="min_temp_water_time">--</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="top_four_b">
+                            <div class="center_box">
+                            <div class="temperature_icon_box left">
+                                <figure class="temperature_icon">
+                                    <img src="image/cloud.png">
+                                    <figcaption>极值<br>风浪</figcaption>
+                                </figure>
+                            </div>
+                            <div class="temperature">
+                                <table class="wave_wind_rain left">
+                                    <tr>
+                                        <td><strong>最大波高</strong></td><td><span class="max_waveheight_val">--</span><span class="unit">m</span></td>
+                                        <td class="max_waveheight_name">--</td><td class="max_waveheight_time">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>最大风速</strong></td><td><span class="max_speed_wind_val">--</span><span class="unit">m/s</span></td>
+                                        <td class="max_speed_wind_name">--</td><td class="max_speed_wind_time">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>最大雨量</strong></td><td><span class="max_rainfall_val">--</span><span class="unit">mm</span></td>
+                                        <td class="max_rainfall_name">--</td><td class="max_rainfall_time">--</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="top_four_d">
+                            <div class="center_box">
+                            <div class="temperature_icon_box left">
+                                <figure class="temperature_icon">
+                                    <img src="image/oil.png">
+                                    <figcaption>海洋油<br>污染</figcaption>
+                                </figure>
+                            </div>
+                            <div class="temperature oil_about">
+                                <div class="oil_param">
+                                    <p class="oilinwater">--</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div class="middle_two">
+                        <div class="middle_two_a left">
+                            <div class="bg_img1"></div>
+                            <div class="center_box">
+                            <div class="place_icon_introduce place_icon_introduce1 left">
+                                <figure class="place_icon_font">
+                                    <img src="image/seaside.png"  class="place_icon1">
+                                    <figcaption class="place_name">海滨浴场</figcaption>
+                                </figure>
+                            </div>
+                            <div class="place_param left">
+                                <table class="beach_tab">
+                                    <tr><td>大梅沙</td><td>--</td></tr>
+                                    <tr><td>小梅沙</td><td>--</td></tr>
+                                    <tr><td><span class="western">西</span>涌</td><td>--</td></tr>
+                                    <tr><td><span class="master">东</span>涌</td><td>--</td></tr>
+                                    <tr><td>七星湾</td><td>--</td></tr>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="middle_two_b right">
+                            <div class="bg_img2"></div>
+                            <div class="center_box">
+                            <div class="place_icon_introduce place_icon_introduce2 left ">
+                                <figure class="place_icon_font">
+                                    <img src="image/tourist_area.png"  class="place_icon1">
+                                    <figcaption class="place_name">旅游区</figcaption>
+                                </figure>
+                                <div class="grade">
+                                    <div class="grade_middle left click_grade ">
+                                        <!--<img src="image/grade.png"><br>-->
+                                        <span class="active">西部<br>海区</span>
+                                    </div>
+                                    <div class="grade_top left click_grade ">
+                                        <!--<img src="image/grade1.png"><br>-->
+                                        <span>大鹏<br>湾区</span>
+                                    </div>
+                                    <div class="grade_bottom left click_grade">
+                                        <!--<img src="image/grade2.png"><br>-->
+                                        <span>大鹏<br>半岛</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="place_param place_param2 left">
+                                <table class="grade_tab west_seaarea">
+                                </table>
+                                <table class="grade_tab roc">
+                                </table>
+                                <table class="grade_tab roc_peninsula">
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment_status right">
+                    <div id="pie"></div>
+                    <div class="status offline">
+                        <h1>失联设备</h1>
+                        <div class="equipment_status_box">
+                            <div class="status_offline">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status online">
+                        <h1>在线设备</h1>
+                        <div class="equipment_status_box">
+                            <div class="status_online">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+
+
+        </div>
+        <div class="container_bottom">
+            <a href="ocean_framework.html?id=sea_env.html">
+                <div class="sea_introduce bottom_div">
+                    <figure>
+                        <img src="image/index/near_.sea.png" class="img_bot">
+                        <figcaption>近海环境</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <a href="ocean_framework.html?id=sea_forecast.html">
+                <div class="ocean_testing bottom_div">
+                    <figure>
+                        <img src="image/index/forecast.png" class="img_bot">
+                        <figcaption>观测预报</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <a href="ocean_framework.html?id=sea_space.html">
+                <div class="data_assess bottom_div">
+                    <figure>
+                        <img src="image/index/sea_zone.png" class="img_bot">
+                        <figcaption>海洋空间</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <a href="ocean_framework.html?id=sea_economy.html">
+                <div class="video bottom_div">
+                    <figure>
+                        <img src="image/index/economic.png" class="img_bot">
+                        <figcaption>涉海经济</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <a href="ocean_framework.html?id=sea_monitor.html">
+                <div class="equipment bottom_div">
+                    <figure>
+                        <img src="image/index/video.png" class="img_bot">
+                        <figcaption>视频监控</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <a href="ocean_framework.html?id=sea_data.html">
+                <div class="data_admin bottom_div">
+                    <figure>
+                        <img src="image/index/data.png" class="img_bot">
+                        <figcaption>数据管理</figcaption>
+                    </figure>
+                </div>
+            </a>
+            <!--<div class="edition_box">
+                <div class="about_us bottom_div">
+                    <div class="img_word">
+                        <div><img src="image/edition.png" class="img_bot"></div>
+                        <span>版本信息</span>
+                    </div>
+                </div>
+                <div class="edition">
+                    <div class="edition_left">
+                        <p class="img_logo"><img src="image/home_page_logo.png"></p>
+                        <p class="font_logo">Omni Ocean</p>
+                        <div class="edition_time">
+                            <p>当前版本:<br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="edition">&#45;&#45;</span></p>
+                            <p>构建时间:<br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="edition_time">&#45;&#45;</span></p>
+                        </div>
+                    </div>
+                    <div class="edition_right">
+                        <strong>ZTE中兴</strong>
+                    </div>
+                    <p class="edition_bot">2017 © ZTE - 中兴通讯股份有限公司.</p>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

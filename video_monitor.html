@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实时视频监测</title>
+<!--<link href="css/common/common.css" rel="stylesheet" />-->
+<link rel="stylesheet" href="css/video_monitoring/video_monitoring.css">
+<script data-main="js/video_monitoring_config" src="thirdparty/require.min.js"></script>
+</head>
+<body class="was_developing">
+<div id="video_monitoring">
+    <!--监控视频左边-->
+    <div class="video_left">
+        <div class="video_top">
+            <div class="video_box">
+                <div class="video_head">
+                    <img src="image/monitor_ing.png">
+                    <div class="videoName">渔业大楼实时画面</div>
+                    <div class="videoTime">2017年01月09日 星期一 10:35</div>
+                </div>
+                <div class="video">
+                    <video class="video" src="video/yuyedalou.mp4"  autoplay loop muted preload></video>
+                    <div class="full_screen"><img src="image/full_screen.png"></div>
+                </div>
+            </div>
+            <div class="video_box">
+                <div class="video_head">
+                    <img src="image/monitor_ing.png">
+                    <div class="videoName">红树林侨城东路</div>
+                    <div class="videoTime">2017年01月09日 星期一 10:35</div>
+                </div>
+                <div class="video">
+                    <video src="video/hongshulin_qiaocheng.mp4" class="video"  autoplay loop muted preload></video>
+                    <div class="full_screen"><img src="image/full_screen.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="video_bottom">
+            <div class="video_box">
+                <div class="video_head">
+                    <img src="image/monitor_ing.png">
+                    <div class="videoName">红树林沙河东路</div>
+                    <div class="videoTime">2017年01月09日 星期一 10:35</div>
+                </div>
+                <div class="video">
+                    <video src="video/hongshulin_shahe.mp4" class="video"  autoplay loop muted preload></video>
+                    <div class="full_screen"><img src="image/full_screen.png"></div>
+                </div>
+            </div>
+            <div class="video_box">
+                <div class="video_head">
+                    <img src="image/monitor_ing.png">
+                    <div class="videoName">深圳湾大桥</div>
+                    <div class="videoTime">2017年01月09日 星期一 10:35</div>
+                </div>
+                <div class="video">
+                    <video src="video/shenzhenwan.mp4" class="video"  autoplay loop muted preload></video>
+                    <div class="full_screen"><img src="image/full_screen.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fullScreen_video" hidden>
+        <div class="full_video_box">
+            <div class="full_video_head">
+                <img src="image/monitor_ing.png">
+                <div class="full_videoName">杨梅坑实时画面</div>
+                <div class="full_videoTime">2017年01月09日 星期一 10:35</div>
+            </div>
+            <div class="full_video">
+                <video src=""  autoplay loop muted preload></video>
+                <div class="full_screen full_screen2"><img src="image/close_fullScreen.png"></div>
+            </div>
+        </div>
+    </div>
+    <!--监控视频右边-->
+    <div class="video_right">
+            <P>海域视频监测点</P>
+        <div class="video_right_min">
+            <ul>
+                <li>
+                    <span class="video_right_minName">深圳湾大桥</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">红树林沙河东路</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">红树林侨城西路</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">东山珍珠酒店</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">海运大厦</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">天文台东侧</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">天文台西侧</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">官湖捷德纺织厂</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">大铲湾二期</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="active video_right_minName">杨梅坑</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img active_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速3号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速14号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速14号平台靠路测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速10号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速10号平台靠路测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速6号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速6号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速17号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速20号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速20号平台靠路测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速26号平台靠路测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">沿江高速26号平台靠海测</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">滨海管理局</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">渔业大楼</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">大梅沙海滨浴场</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">云海山庄</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">南澳渔港</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+                <li>
+                    <span class="video_right_minName">土洋</span>
+                    <img src="image/jiankong.png" alt="" class="video_right_img">
+                </li>
+            </ul>
+        </div>
+        <div class="video_right_bot">
+            <img src="image/xialai.png" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据呈现</title>
+    <link rel="stylesheet" href="css/common/jquery-ui.min.css">
+    <link href="css/common/common.css" rel="stylesheet" />
+    <link href="css/data_show/data_show.css" rel="stylesheet">
+    <link href="thirdparty/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/common/dateRange.css" rel="stylesheet" />
+	<script data-main="js/data_show_config" src="thirdparty/require.min.js"></script>
+</head>
+<body onselectstart="return false">
+<span id="test_data" style="position: absolute; top: 0; left: 0;"></span>
+<span id="tendency_data" style="position: absolute; top: 0; left: 0;"></span>
+<span id="test_title" style="position: absolute; top: 0; left: 0;"></span>
+<span id="time_trend" style="position: absolute; top: 0; left: 0;"></span>
+<span id="time_control" style="position: absolute; top: 0; left: 0;"></span>
+<section id="overview">
+    <div class="overview_left" id="overview_left">
+        <div id ="ocean_map"></div>
+        <div class="bg_color_box" id="bg_color_box">
+		    <span class="temp_du">(℃)</span>
+            <div class="bg_color bg_color1"><span class="min_tmp"><span id="min_tmp">--</span></div>
+            <div class="bg_color bg_color2"></div>
+            <div class="bg_color bg_color3"><span class="min_tmp_1"><span id="min_tmp_1">--</span></div>
+            <div class="bg_color bg_color4"></div>
+            <div class="bg_color bg_color5"><span class="min_tmp_2"><span id="min_tmp_2">--</span></div>
+            <div class="bg_color bg_color6"></div>
+            <div class="bg_color bg_color7"><span class="avg_tmp"><span id="avg_tmp">--</span></div>
+            <div class="bg_color bg_color8"></div>
+            <div class="bg_color bg_color9"><span class="max_tmp_1"><span id="max_tmp_1">--</span></div>
+            <div class="bg_color bg_color10"></div>
+            <div class="bg_color bg_color11"><span class="max_tmp_2"><span id="max_tmp_2">--</span></div>
+            <div class="bg_color bg_color12"></div>
+            <div class="bg_color bg_color13"><span class="max_tmp"><span id="max_tmp">--</span></div>
+        </div>
+            <input type="range" id="range" hidden>
+        <div id="showSize">
+            <div class="back_time"><input type="text" id="back_time" value="" readonly></div>
+            <div id="showSize_max">最高 <span class="show_name">水温</span>：<span class="show_max_name">沙头角</span><span class="show_max_data">--</span><br></div>
+            <div id="showSize_min">最低 <span class="show_name">水温</span>：<span class="show_min_name">核电站</span><span class="show_min_data">--</span></div>
+        </div>
+        </div>
+    <div class="overview_right" id="flashing">
+    	<div class="ocean_parameters" id="ocean_list">
+            	<div class="right_title">
+                    <h3>大梅沙</h3>
+                </div>
+                <div class="tree_div">
+                	<font id='icon1'><i class="fa icon_bottom_right"></i></font>气象数据
+                    <div class="abnormal_number abnormal_1"><span class="abnormal_number_1">0</span>项&nbsp;建议关注</div>
+                </div>
+                <div id="title1" class="title" style="display:none;">
+                    <div class="abnormal_list" id="01">最大风速<span class="data_units">单位：m/s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"></span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="02">风速<span class="data_units">单位：m/s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"></span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="03">风向<span class="data_units">单位：°</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast contrast_">- -</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="04">气温<span class="data_units">单位：°C</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="05">相对湿度<span class="data_units">单位：%</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="06">气压<span class="data_units">单位：hPa</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="07">雨量<span class="data_units">单位：mm</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="08">有效光合<span class="data_units">单位：㎡*s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                </div>
+                <div class="tree_div">
+                	<font id='icon2'><i class="fa icon_bottom_right"></i></font>水动力数据
+                    <div class="abnormal_number abnormal_2"><span class="abnormal_number_2">0</span>项&nbsp;建议关注</div>
+                </div>
+                <div id="title2" class="title" style="display:none;">
+                    <div class="abnormal_list" id="09" >流速<span class="data_units">单位：cm/s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="10" >流向<span class="data_units">单位：°</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast contrast_">- -</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="11" >波向<span class="data_units">单位：°</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast contrast_">- -</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list opacity" id="12" >表层水温<span class="data_units">单位：°C</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency opacity"></div>
+                    <div class="abnormal_list" id="13">最大波高<span class="data_units">单位：m</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="14" >最大波周期<span class="data_units">单位：s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="15">1/10波高<span class="data_units">单位：m</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list"  id="16">1/10波周期<span class="data_units">单位：s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="17">有效波高<span class="data_units">单位：m</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="18">有效波周期<span class="data_units">单位：s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="19">平均波高<span class="data_units">单位：m</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="20">平均波周期<span class="data_units">单位：s</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="21">波浪个数<span class="data_units">单位：个</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="22">主波向<span class="data_units">单位：°</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast contrast_">- -</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="23">方位<span class="data_units">单位：°</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast contrast_">- -</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                </div>
+                <div class="tree_div">
+                	<font id='icon3'><i class="fa icon_right_down"></i></font>水质数据
+                    <div class="abnormal_number abnormal_3"><span class="abnormal_number_3">0</span>项&nbsp;建议关注</div>
+                </div>
+                <div id="title3" class="title">
+                    <div class="abnormal_list" id="24">水温
+                    <span class="data_units">单位：°C</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="25">叶绿素a
+                    <span class="data_units">单位：μg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="26">PH值<span class="data_units"></span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="27">溶解氧<span class="data_units">单位：mg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"></span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="28">溶解氧饱和度<span class="data_units">单位：%</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="29">浊度<span class="data_units"></span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="30">电导率<span class="data_units">单位：mS/cm</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="31">氧化还原电位<span class="data_units">单位：mV</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="32">盐度<span class="data_units">单位：PPt</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="33">总溶解性固体<span class="data_units">单位：g/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="34">蓝绿藻
+                    	<span class="data_units">单位：uL</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="35">化学需氧量
+                    	<span class="data_units">单位：mg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="36">水中油<span class="data_units"></span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="37">表层水温
+                    	<span class="data_units">单位：°C</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="38">表层电导率<span class="data_units">单位：mS/cm</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="39">表层盐度<span class="data_units">单位：ppt</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency "></div>
+                    <div class="abnormal_list opacity" id="40">水下10米:水深<span class="data_units">单位：m</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency opacity"></div>
+                    <div class="abnormal_list" id="41">钴-60(Co)<span class="data_units">单位：Bq/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="42">锶-89(Sr)<span class="data_units">单位：Bq/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="43">铯-134(Cs)<span class="data_units">单位：Bq/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="44">铯-137(Cs)<span class="data_units">单位：Bq/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="45">氨氮<span class="data_units">单位：μg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="46">亚硝酸盐<span class="data_units">单位：μg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="47">硝酸盐<span class="data_units">单位：μg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                    <div class="abnormal_list" id="48">磷酸盐<span class="data_units">单位：μg/L</span>
+                        <div class="data_state">
+                            <span class="data_state_font"> </span>
+                            <i class=""></i>
+                            <span class="contrast" onclick="comparative(this)">对比</span>
+                        </div>
+                    </div>
+                    <div class="abnormal_list_lucency"></div>
+                </div>
+                <div id="ocean_parameters_lucency"></div>
+            </div>
+            <div class="synthesize_contrast">
+                <a href="#" id="ComprehensiveContrast">多指标综合对比</a>
+            </div>
+        </div>
+    </div>
+    <div class="maximize"><span>图表统计</span><img src="image/big.png"></div>
+    <div class="overview_bottom" id="overview_btm">
+        <div class="bar_trend_nav">
+            <ul class="bar_nav f1">
+                <li class="time" data-id="#datashowbar">实时统计</li>
+                <li data-id="#trend_show">历史统计</li>
+            </ul>
+            <div class="wrapper single_index" style="display: none"><!--日期-->
+                <div id="div_date">
+                    <div class="input_box">
+                    	<input type="text" id="dateStart" value="2016-09-22" readonly>
+                        <span class="line">-</span>
+                    	<input type="text" id="dateEnd"  value="2016-09-22" readonly>
+                        <select name="select" id="select_hour" class="select_data">
+                    		<option value="1">00</option>
+                    		<option value="2">01</option>
+                            <option value="3">02</option>
+                    		<option value="4">03</option>
+                            <option value="5">04</option>
+                    		<option value="6">05</option>
+                            <option value="7">06</option>
+                    		<option value="8">07</option>
+                            <option value="9">08</option>
+                    		<option value="10">09</option>
+                            <option value="11">10</option>
+                    		<option value="12"  selected="selected">11</option>
+                            <option value="13">12</option>
+                    		<option value="14">13</option>
+                            <option value="15">14</option>
+                    		<option value="16">15</option>
+                            <option value="17">16</option>
+                    		<option value="18">17</option>
+                            <option value="19">18</option>
+                    		<option value="20">19</option>
+                            <option value="21">20</option>
+                    		<option value="22">21</option>
+                            <option value="23">22</option>
+                    		<option value="24">23</option>
+                        </select>
+                        <span class="select_data">:</span>
+                        <select name="select" id="select_minute" class="select_data">
+                    		<option value="1">00</option>
+                    		<option value="2" selected="selected">30</option>
+                        </select>
+                    </div>
+                    <button id="confirm_btn">确定</button>
+                </div>
+                <div class="AllCheck"><input type="checkbox" id="isAllCheck">&nbsp;<label for="isAllCheck">全选</label></div>
+            </div>
+            <div class="minimize"></div>
+        </div>
+        <div id="datagram">
+        	<div class="bar_content compass" id="data_compass">
+            	<span class="compass_name"></span>
+            	<div  class="compass" id="data_com">
+                	
+                </div>
+            </div>
+            <div class="bar_content" id="datashowbar"></div>
+            <div class="trend_content opacity" id="trend_show"></div>
+        </div>
+	</div>
+    <div class="statistics" id="statistics">
+    	<div class="statistics_top">
+        	<ul class="statistics_nav">
+            	<li class="bar_statistics time" temp_id="#bar_statistics">实时统计</li>
+                <li class="trend_statistics" temp_id="#trend_statistics">历史统计</li>
+            </ul>
+            <div class="wrapper more_wrapper multi_index" style="display: none">
+                <div id="div_date_two">
+                    <div class="input_box"><input type="text" id="dateStart_two" value="2016-09-22" readonly>-
+                    						<input type="text" id="dateEnd_two"  value="2016-09-22" readonly>
+                    </div>
+                    <button id="confirm_btn_two">确定</button>
+                </div>
+               
+            </div>
+            <!--<span class="statistics_close" onClick="statisticsClose()"></span>-->
+            <span class="statistics_close"></span>
+        </div>
+        <div class="statistics_chart">
+        	<div class="statistics_single" id="bar_statistics">
+                <div class="indicatrix"></div>
+            </div>
+            <div class="statistics_more opacity" id="trend_statistics">
+                <div class="indicatrix"></div>
+                <div class="checkbox opacity">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="ck chk_1 chk_color_1" value="深圳湾" id="sz" data-grade="0">
+                            <label for="sz"></label>
+                            <label for="sz">深圳湾</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_2 chk_color_2" value="沙井" id="sj" data-grade="1" >
+                            <label for="sj"></label>
+                            <label for="sj">沙井</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_3 chk_color_3" value="矾石" id="fc" data-grade="2" >
+                            <label for="fc"></label>
+                            <label for="fc">矾石</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_4 chk_color_4" value="伶仃南" id="ldn" data-grade="3" >
+                            <label for="ldn"></label>
+                            <label for="ldn">伶仃南</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_5 chk_color_5" value="沙头角" id="stj" data-grade="4" >
+                            <label for="stj"></label>
+                            <label for="stj">沙头角</label>
+                        </li>
+                        <li style="color: #000">
+                            <input type="checkbox" class="ck chk_6 chk_color_6" value="大梅沙" id="dms" data-grade="5"  checked id="dms">
+                            <label for="dms"></label>
+                            <label for="dms">大梅沙</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_7 chk_color_7" value="下沙" id="ptj" data-grade="6" >
+                            <label for="ptj"></label>
+                            <label for="ptj">下沙</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_8 chk_color_8" value="南澳" id="na" data-grade="7" >
+                            <label for="na"></label>
+                            <label for="na">南澳</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_9 chk_color_9" value="大鹏湾口" id="mdk" data-grade="8" >
+                            <label for="mdk"></label>
+                            <label for="mdk">大鹏湾口</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_10 chk_color_10" value="东涌" id="cby" data-grade="9" >
+                            <label for="cby"></label>
+                         	<label for="cby">东涌</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_11 chk_color_11" value="东山" id="hts" data-grade="10" >
+                            <label for="hts"></label>
+                            <label for="hts">东山</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_12 chk_color_12" value="核电站" id="csw" data-grade="11" >
+                            <label for="csw"></label>
+                            <label for="csw">核电站</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="ck chk_13 chk_color_13" value="坝光" id="lgj" data-grade="12" >
+                            <label for="lgj"></label>
+                            <label for="lgj">坝光</label>
+                        </li>
+                        <li id="allckBox">
+                            <input type="checkbox" id="allck">
+                            <label for="allck">全选</label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

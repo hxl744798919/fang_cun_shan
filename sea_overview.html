@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>海域概览</title>
+    <link rel="stylesheet" href="css/sea_overview/sea_overview.css">
+    <script data-main="js/sea_overview_config" src="thirdparty/require.min.js"></script>
+</head>
+<body onload="init();" onselectstart="return false">
+    <div id="overview">
+        <div id="mapBox">
+            <iframe src="../../../webgis/map.html" id="ocean_map"  frameborder=0 marginheight=no onselectstart="return false"></iframe>
+        </div>
+        <!--右上角伸缩条-->
+        <div class="rightTop">
+            <div class="toggle" style="display: none"></div>
+            <ul class="checkBox" onselectstart="return false">
+                <li class = "checkColor"><span class="icon"><img src="image/radio-select.png" ></span>海域全景</li>
+                <li data-area =".zhenyanzhi_area"><span class="icon"><img src="image/radio-deselect.png" ></span>海水增养殖区</li>
+                <li class="li" data-area =".haishui_area"><span class="icon"><img src="image/radio-deselect.png" ></span>海水浴场</li>
+                <li data-area =".handao_area"><span class="icon"><img src="image/radio-deselect.png" ></span>航道用海区</li>
+                <li data-area =".baohuqu_area"><span class="icon"><img src="image/radio-deselect.png" ></span>海洋自然保护区</li>
+                <li data-area =".zhongdian_area"><span class="icon"><img src="image/radio-deselect.png" ></span>重点工程用海区</li>
+                <li data-area =".binhai_area"><span class="icon"><img src="image/radio-deselect.png" ></span>滨海旅游度假区</li>
+                <li data-area =".yuyeziyuan_area"><span class="icon"><img src="image/radio-deselect.png" ></span>渔业资源利用和养护区</li>
+            </ul>
+        </div>
+        <div class="minRightTop" style="display: none"><span></span><div class="minTxt">所有监测</div></div>
+
+
+        <!--右下角小地图-->
+        <div id="map_shrink">
+            <img src="image/map_shrink.png" alt="" width="434px;"; height="253px">
+            <!--小地图上的正方提示框-->
+            <div class="all_area">
+                <!--增养殖区-->
+                <div class="zhenyanzhi_area ">
+                    <div class="zhenyanzhi_nanao hover" data-areaId="1"></div>
+                    <div class="zhenyanzhi_dongsan hover" data-areaId="2"></div>
+                </div>
+                <!--海水浴场-->
+                <div class="haishui_area ">
+                    <div class="haishui_xiaomeisha hover" data-areaId="3"></div>
+                    <div class="haishui_dameisha hover" data-areaId="4"></div>
+                </div>
+                <!--航道用海区-->
+                <div class="handao_area ">
+                    <div class="handao_xibu hover" data-areaId="5"></div>
+                    <div class="handao_dongbu hover" data-areaId="6"></div>
+                </div>
+                <!--海洋自然保护区-->
+                <div class="baohuqu_area">
+                    <div class="baohuqu_xibu hover" data-areaId="7"></div>
+                    <div class="baohuqu_zhongbubu hover" data-areaId="8"></div>
+                    <div class="baohuqu_dongbu hover" data-areaId="9"></div>
+                </div>
+                <!--重点工程用海区-->
+                <div class="zhongdian_area">
+                    <div class="zhongdian_xibu hover" data-areaId="10"></div>
+                    <div class="zhongdian_dongbu hover" data-areaId="11"></div>
+                </div>
+                <!--滨海旅游度假区-->
+                <div class="binhai_area">
+                    <div class="binhai_baoan hover" data-areaId="12"></div>
+                    <div class="binhai_qianhai hover" data-areaId="13"></div>
+                    <div class="binhai_houhai hover" data-areaId="14"></div>
+                    <div class="binhai_meishao hover" data-areaId="15"></div>
+                    <div class="binhai_xiyong hover" data-areaId="16"></div>
+                    <div class="binhai_nanao hover" data-areaId="17"></div>
+                    <div class="binhai_baiguan hover" data-areaId="18"> </div>
+                </div>
+                <!--渔业资源利用和养护区-->
+                <div class="yuyeziyuan_area area_active">
+                    <div class="yuyeziyuan_xibu hover" data-areaId="19"></div>
+                    <div class="yuyeziyuan_dongbu hover" data-areaId="20"></div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!--点击小地图弹出放大地图-->
+        <div id = "map_magnify">
+            <iframe src="../../../webgis/map.html" id="ocean_map_2"  frameborder=0 marginheight=no></iframe>
+            <img src="image/close_fullScreen.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

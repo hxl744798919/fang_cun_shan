@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/typhoon_warning/typhoon_warning.css">
+    <script data-main="js/typhoon_warning_config" src="thirdparty/require.min.js"></script>
+</head>
+<body onload="init();">
+    <div id ="typhoon_warning">
+        <!--左地图-->
+        <div id="typhoon_map">
+                <iframe src="../../../webgis/map.html" id="ocean_map"  frameborder=0 marginheight=no onselectstart="return false"></iframe>
+        </div>
+        <!--右边侧边栏-->
+        <div id = "typhoon_broadside">
+            <!--测边栏伸缩条-->
+            <div class="tc_flexible"></div>
+
+            <!--台风历史-->
+            <div class = "typhoon_history">
+                <div class="th_head clearfix">
+                    <p class="th_head_tf th_head_active" data-th=".th_listbox">台风列表</p>
+                    <p class="th_head_lj " data-th=".th_similarity">相似路径</p>
+                </div>
+                <div class="th_listbox BoxSimi_active">
+                    <div class="th_time">
+                        <select name="" id="cboxyear">
+                            <option value="0">请选择....</option>
+                        </select>
+                    </div>
+                    <div class="th_details">
+                        <!--<ul class="clearfix">-->
+                        <!--<li><span></span></li>-->
+                        <!--<li>1604</li>-->
+                        <!--<li>妮妲</li>-->
+                        <!--<li>NIDA</li>-->
+                        <!--</ul>-->
+                    </div>
+                </div>
+                <div class="th_similarity ">
+                    <a href="http://10.9.234.38:3838/taifengdtw/" target="_blank">查询</a>
+                </div>
+
+
+            </div>
+            <!--台风当前-->
+            <div class = "typhoon_current">
+                <p>路径信息</p>
+                <!--有台风时候格式-->
+                    <div class="tc_details">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>经度</th>
+                                    <th>纬度</th>
+                                    <th>风速</th>
+                                    <th>气压</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--<tr>-->
+                                <!--<td>0830 05h</td>-->
+                                <!--<td>108.9</td>-->
+                                <!--<td>24.8</td>-->
+                                <!--<td>15</td>-->
+                                <!--<td>998</td>-->
+                            <!--</tr>-->
+                            </tbody>
+
+
+                        </table>
+                        <div class="tc_but">近海观测指标</div>
+                    </div>
+                <!--无台风的格式-->
+                <div class="no_tc_details" style="display: none">
+                    <table>
+                        <tr>
+                            <th>时间</th>
+                            <th>经度</th>
+                            <th>纬度</th>
+                            <th>风速</th>
+                            <th>气压</th>
+                        </tr>
+                        </table>
+                    <div class="no_tc_but">近海观测指标</div>
+                </div>
+
+            </div>
+        </div>
+        <!--台风详情-->
+        <div id="typhoon_details">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <img src="image/typhoon/close-normal.png">
+            <div class="all_check"><input type="checkbox" id="ck" checked>&nbsp;<label for="ck">取消</label></div>
+            <div class="mous_box">
+                <div class="typhoon_path_info">
+                    <div class="typhoon_path_title">台风路径信息</div>
+                    <table class="typhoon_path_tab">
+                        <tr class="tr_time"><td id="typoon_time">时间</td></tr>
+                        <tr class="tr_distance"><td id="typoon_distance">距离</td></tr>
+                        <tr class="tr_air"><td id="typoon_air">气压</td></tr>
+                        <tr class="tr_move"><td id="typoon_move">移速</td></tr>
+                        <tr class="tr_wind"><td id="typoon_wind">风速</td></tr>
+                    </table>
+                    <button class="btn_left"><img src="image/typhoon/btn_left.png"></button>
+                    <button class="btn_right"><img src="image/typhoon/btn_right.png"></button>
+                </div>
+                <div id="trend">
+                </div>
+            </div>
+
+        </div>
+        <!--左下角实时和历史提示款-->
+        <div id="typhoon_tip">
+            <!--实时提示框-->
+            <div class="tip_history">
+                <ul>
+                    <li>定位时间：<span>2016年07月31日  05时</span></li>
+                    <li>编<lable></lable>号：<span>1604</span></li>
+                    <li>名<lable></lable>称：<span>妮妲（1604）</span></li>
+                    <li>北<lable></lable>纬：<span>24.8</span>度</li>
+                    <li>东<lable></lable>经：<span>108.9</span>度</li>
+                    <li>中心气压：<span>998</span>百帕</li>
+                    <li>中心附近最大风速：<span>15</span>米/秒</li>
+                    <li>强<lable></lable>度：<span>热带低压</span></li>
+                    <li>与深圳距离：<span>579</span>公里</li>
+                </ul>
+            </div>
+            <!--历史提示框-->
+            <div class="tip_current">
+                <p>历史台风信息</p>
+                <ul>
+                    <li>201604妮妲（NIda）</li>
+                    <li>起止时间：<span>2016.07.30 17:00 </span></li>
+                    <li>登陆地点：<span>东涌（深圳）</span></li>
+                    <li>登陆时间：<span>2016.08.02</span></li>
+                    <li>登陆强度等级：<span>台风</span></li>
+                    <li>登陆最大风速：<span>40米/秒 14级 2016.08.02 04:00</span></li>
+                    <li>站点最大风速：<span>23米/秒 南澳 2016.08.02 06:00</span></li>
+                    <li>站点最大波高：<span>23米 南澳 2016.08.02 06:00</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--左下角台风等级图例提示-->
+        <div id="typhoon_cutline" class="clearfix">
+            <div class="tyc_but">
+                台风强度<span class="triangle_left"></span>
+            </div>
+            <ul class="tyc_show">
+                <li><span></span>热带低压</li>
+                <li><span></span>热带风暴</li>
+                <li><span></span>强热带风暴</li>
+                <li><span></span>台风</li>
+                <li><span></span>强台风</li>
+                <li><span></span>超强台风</li>
+            </ul>
+        </div>
+        <!--左下角预报机构图例提示-->
+        <div id="prediction_cutline" class="clearfix">
+            <div class="prc_but">
+                预报机构<span class="triangle_left"></span>
+            </div>
+            <ul class="prc_show">
+                <li><input type="checkbox" value="中国" checked>中国<span>━ ━</span></li>
+                <li><input type="checkbox" value="中国香港" checked>中国香港<span>━ ━</span></li>
+                <li><input type="checkbox" value="美国" checked>美国<span>━ ━</span></li>
+                <li><input type="checkbox" value="日本" checked>日本<span>━ ━</span></li>
+                <li><input type="checkbox" value="中国台湾" checked>中国台湾<span>━ ━</span></li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>

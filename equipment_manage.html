@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>监测设备管理</title>
+<link rel="stylesheet" href="css/common/jquery-ui.min.css">
+<link href="thirdparty/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href="css/equipment_manage/equipment_manage.css" rel="stylesheet" />
+<link href="css/common/common.css" rel="stylesheet" />
+<link href="css/common/dateRange.css" rel="stylesheet" />
+<script data-main="js/equipment_manage_config" src="thirdparty/require.min.js"></script>
+</head>
+
+<body onload="init();">
+<section id="overview">
+    <div id="mapBox">
+        <div class="overview_left" id="overview_left">
+            <iframe src="../../../webgis/map.html" id="ocean_map"  frameborder=0 marginheight=no></iframe>
+            <div class="gis_buoy" id="gis_buoy"></div>
+        </div>
+    </div>
+    <div class="overview_right" id="flashing">
+    	<div class="ocean_parameters" id="ocean_list" onselectstart="return false";>
+            <div class="right_title">
+                <h3>监测设备管理</h3>
+                <div class="abnormal_number">
+                	<!--<span>23</span>异常-->
+                </div>
+            </div>
+            <div class="tree_div">
+                <font id='icon1'><i class="fa icon_bottom_right"></i></font>
+                <span>波浪浮标</span>
+            </div>
+            <div id="title1" class="title" style="display: none;">
+                <div class="abnormal_list" id="1"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾坝光</span>
+                        <span class="equipment_name">FB01</span>
+                    </div>
+                    <span class="finally_data"></span>
+                    <!--<div class="out_div">   //此注释请勿删除
+                        <div class="arrow"></div>
+                        <div class="arrow_title"><img src="image/warning.png" />大亚湾坝光问题描述</div>
+                        <div class="arrow_text">大亚湾坝光中部的海域：今年以来，深圳湾主要入湾河流水质持续改善，进入深圳湾和深圳河干流的排污口陆续得到整治，图为大沙河入海口现状。</div>
+                    </div>-->
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="2"  >
+	                <div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾杨梅坑</span>
+                        <span class="equipment_name">FB02</span>
+                    </div>
+                    <span class="finally_data"></span>
+                    <!--<div class="out_div">   //此注释请勿删除
+                        <div class="arrow"></div>
+                        <div class="arrow_title"><img src="image/warning.png" />大亚湾杨梅坑问题描述</div>
+                        <div class="arrow_text">大亚湾杨梅坑中部的海域：今年以来，深圳湾主要入湾河流水质持续改善，进入深圳湾和深圳河干流的排污口陆续得到整治，图为大沙河入海口现状。</div>
+                    </div>-->
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="3"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾东涌</span>
+                        <span class="equipment_name">FB03</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="4"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾下沙</span>
+                        <span class="equipment_name">FB04</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="5"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾大梅沙</span>
+                        <span class="equipment_name">FB05</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="6"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">深圳湾蛇口</span>
+                        <span class="equipment_name">FB06</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+           </div>
+            <div class="tree_div">
+                <font id='icon2'><i class="fa icon_right_down"></i></font>
+                <span>环境浮标</span>
+            </div>
+            <div id="title2" class="title">
+                <div class="abnormal_list" id="7"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">哑呤湾坝光</span>
+                        <span class="equipment_name">FBDY1</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="8"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾长湾</span>
+                        <span class="equipment_name">FBDY2</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="9"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾东山</span>
+                        <span class="equipment_name">FBDY3</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <!--<div class="abnormal_list" id="10"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾杨梅坑</span>
+                        <span class="equipment_name">FBDY4</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>-->
+                <div class="abnormal_list" id="11">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大亚湾东涌</span>
+                        <span class="equipment_name">FBDY5</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="12">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾沙头角</span>
+                        <span class="equipment_name">FBDP1</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="13">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾大梅沙</span>
+                        <span class="equipment_name">FBDP2</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="14">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾下沙</span>
+                        <span class="equipment_name">FBDP3</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="15">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾南澳</span>
+                        <span class="equipment_name">FBDP4</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="16">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">大鹏湾口门</span>
+                        <span class="equipment_name">FBDP5</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="17">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">深圳湾蛇口</span>
+                        <span class="equipment_name">FBSZ1</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="18">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">珠江口沙井</span>
+                        <span class="equipment_name">FBZJ1</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="19">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">珠江口矾石</span>
+                        <span class="equipment_name">FBZJ2</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <div class="abnormal_list" id="20">
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">珠江口伶仃南</span>
+                        <span class="equipment_name">FBZJ3</span>
+                    </div>
+                    <span class="finally_data"></span>
+                </div>
+                <div class="abnormal_list_lucency"></div>
+                <!--<div class="abnormal_list" id="21"  >
+                	<div class="select"><img src="image/select-no.png" /></div>
+                	<div class="equipment">
+                    	<span class="equipment_area">珠江口伶仃东</span>
+                        <span class="equipment_name">FBZJ4</span>
+                    </div>
+                    <span class="finally_data">2016.11.07 09:00</span>
+                </div>
+                <div class="abnormal_list_lucency"></div>-->
+            </div>
+           <div id="ocean_parameters_lucency"></div>
+       </div>
+      <!-- <div class="synthesize_contrast">
+           <!--<span href="#" id="equipment_manage">运行分析</span>
+           <span href="#" id="run_analysis" onclick="ModifyCallInfoWindowContent()">运行分析</span>
+           <span href="#" id="equipment_manages">待设计</span>
+       </div>-->
+   </div>
+</section>
+</body>
+</html>
